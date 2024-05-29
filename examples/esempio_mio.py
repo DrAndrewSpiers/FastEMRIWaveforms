@@ -132,7 +132,7 @@ wave = few(M, mu, p0, e0, theta, phi, dt=dt, T=0.1)  #  assumes dt = 10.0 for ma
 
 t = np.arange(len(wave))*dt
 plt.plot(t, wave.real)
-plt.plot(t, wave.imag)
+#plt.plot(t, wave.imag)
 
 dt*(len(wave) - 1)
 
