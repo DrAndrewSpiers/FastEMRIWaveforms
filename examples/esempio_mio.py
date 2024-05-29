@@ -136,6 +136,8 @@ plt.plot(t, wave.real)
 
 dt*(len(wave) - 1)
 
+plt.savefig("waveform.png")
+
 plt.show()
 
 print("end")
