@@ -68,8 +68,8 @@ few = FastSchwarzschildEccentricFlux(
 gen_wave = GenerateEMRIWaveform("Pn5AAKWaveform")
 
 # parameters
-T = 0.1  # years
-dt = 15.0  # seconds
+T = 0.5  # years
+dt = 150.0  # seconds
 M = 1e6
 a = 0.9 
 mu = 1e1
@@ -119,14 +119,14 @@ few = FastSchwarzschildEccentricFlux(
     use_gpu=use_gpu,
 )
 
-M = 5e0
+M = 2e0
 mu = 1e-4
 print(mu)
 p0 = 12.0
 e0 = 0.4
 theta = np.pi/3  # polar viewing angle
 phi = np.pi/4  # azimuthal viewing angle
-dt = 10.0
+dt = 100.0
 
 wave = few(M, mu, p0, e0, theta, phi, dt=dt, T=0.1)  #  assumes dt = 10.0 for max T = 1.0 year
 
@@ -136,7 +136,7 @@ plt.plot(t, wave.real)
 
 dt*(len(wave) - 1)
 
-plt.savefig("waveform.png")
+plt.savefig("waveform2.png")
 
 plt.show()
 
